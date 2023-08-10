@@ -26,9 +26,9 @@ public class TestNG_DZ20 extends BaseClass {
     @Test(dataProvider = "getCert", dataProviderClass = DataTest.class)
     public void Test2CheckCert(String certificateNumber, String expected) throws Exception {
         driver.get("https://certificate.ithillel.ua/");
-        ScreenShoT.getScreenShot("Screen");
-        pages.sendCert(certificateNumber);
 
+        pages.sendCert(certificateNumber);
+        ScreenShoT.getScreenShot("Screen");
         Assert.assertEquals(Boolean.valueOf(expected), pages.CheckCert());
 
     }

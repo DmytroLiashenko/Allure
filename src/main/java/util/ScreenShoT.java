@@ -20,7 +20,7 @@ public class ScreenShoT extends BaseClass {
     @Attachment(value = "Page screenshot", type = "image/png")
     public static byte[] getScreenShot(String fileName) {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File("pictures/failures/" + new SimpleDateFormat("MM_dd_HH-mm-ss").format(Calendar.getInstance().getTime()) + fileName + ".png");
+        File dest = new File("pictures/success/" + new SimpleDateFormat("MM_dd_HH-mm-ss").format(Calendar.getInstance().getTime()) + fileName + ".png");
         try {
             FileUtils.copyFile(file, dest);
         } catch (IOException e) {

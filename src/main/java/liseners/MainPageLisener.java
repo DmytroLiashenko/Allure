@@ -15,8 +15,9 @@ public class MainPageLisener extends BaseClass implements ITestListener  {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        if(result.getMethod().getMethodName().equals("testQuery")){
-            ScreenShoT.getWebElementPNG(driver.findElement(By.id("certificateCheckForm")),result.getTestName());
+        if(result.getMethod().getMethodName().equals("Test2CheckCert")){
+            ScreenShoT.getWebElementPNG(driver.findElement(By.id("certificateImageContainer"))
+                    ,result.getTestName());
         }
     }
 }
